@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-blend-mode: multiply, multiply;
+    font-family: 'Electrolize', sans-serif;
+    padding: 20px;
+    background: url(assets/background.png);
+    background-size: cover;
+}
+
+.weatherForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.cityInput {
+    outline: none;
+    padding: 0.4em 1em;
+    color: black;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 22px;
+    width: 300px;
+    height: 43px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal, color-burn;
+    transition: 0.2s ease-in-out;
+}
+
+.cityInput::placeholder {
+    color: gray;
+}
+
+button[type="submit"] {
+    margin-left: 0.5em;
+    border: none;
+    height: 44px;
+    width: 120px; 
+    font-size: 20px;
+    outline: none;
+    color: black;
+    background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal, color-burn;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: black;
+    color: white;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.card {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: calc(100% / 5 - 20px);
+    margin: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    text-align: center;
+    flex-grow: 1;
+    min-width: 180px; 
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.tempDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.weatherEmoji {
+    font-size: 3.5rem;
+    margin: 10px 0;
+}
+
+.errorDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.75);
+    text-align: center;
+}
